@@ -8,7 +8,7 @@ from bot import EMOJIS
 @TelegramBot.on_message(filters.all)
 async def send_reaction(_, msg: Message):
     try:
-        await msg.react(choice(Telegram.EMOJIS))
+        await msg.react(choice(EMOJIS))
     except (
         MessageIdInvalid,
         EmoticonInvalid,
